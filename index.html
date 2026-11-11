@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===== EDIT: page title, description and social preview ===== -->
+<title>Divya Chaudhary — Pastry Chef Portfolio</title>
+<meta name="description" content="Portfolio of Divya Chaudhary, pastry chef and founder of Eternal Blaze Bakeshoppe by Divya — celebration cakes, chocolate, breads, pastries and desserts, all 100% eggless.">
+<meta name="author" content="Divya Chaudhary">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Divya Chaudhary — Pastry Chef">
+<meta property="og:description" content="Celebration cakes, chocolate, breads, pastries and desserts — all 100% eggless.">
+<!-- EDIT: once the site is live, replace [ADD SITE URL] with your real address, e.g. https://divya-chaudhary.netlify.app -->
+<meta property="og:url" content="[ADD SITE URL]/">
+<meta property="og:image" content="[ADD SITE URL]/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Black fondant cake with gold spheres by Divya Chaudhary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Divya Chaudhary — Pastry Chef">
+<meta name="twitter:description" content="Celebration cakes, chocolate, breads, pastries and desserts — all 100% eggless.">
+<meta name="twitter:image" content="[ADD SITE URL]/images/og-cover.jpg">
+<meta name="theme-color" content="#FAF8F3">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/Black%20rose%20Fondant.jpg">
+
+<style>
+/* ===== Palette taken from the PDF portfolio ===== */
+:root{
+  --ivory:#FAF8F3;
+  --cream:#F3EDE4;
+  --sand:#E5D8C7;
+  --blush:#EEDFD8;
+  --taupe:#A8A19A;
+  --mocha:#6B5643;
+  --cocoa:#3B2F2A;
+  --ink:#2F2929;
+  --gold:#A88B5E;       /* decorative lines & icons */
+  --gold-text:#7E6340;  /* gold for small text (passes contrast on ivory) */
+  --line:rgba(107,86,67,.18);
+  --shadow:0 18px 40px -22px rgba(59,47,42,.45);
+  --radius:14px;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --nav-h:68px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+body{margin:0;background:var(--ivory);color:var(--cocoa);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--ink);line-height:1.1;margin:0}
+em{font-style:italic}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+.eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-text);font-weight:500;display:flex;align-items:center;gap:.8rem;margin-bottom:1.1rem}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+.section{padding:clamp(4.5rem,10vw,8rem) 0}
+.section-title{font-size:clamp(2.3rem,5.5vw,3.6rem)}
+.section-title em{color:var(--mocha)}
+.lede{max-width:560px;color:var(--mocha);margin:1.1rem 0 0}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.6rem 1rem;z-index:100}
+.skip:focus{left:1rem;top:1rem}
+:focus-visible{outline:2px solid var(--mocha);outline-offset:3px;border-radius:4px}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 1.6rem;border-radius:999px;font:500 .78rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid var(--cocoa);transition:background .3s,color .3s,transform .3s;cursor:pointer}
+.btn-solid{background:var(--cocoa);color:var(--ivory)}
+.btn-solid:hover{background:var(--mocha);border-color:var(--mocha)}
+.btn-ghost{background:transparent;color:var(--cocoa)}
+.btn-ghost:hover{background:var(--cocoa);color:var(--ivory)}
+
+/* ===== Navigation ===== */
+.nav{position:fixed;inset:0 0 auto;height:var(--nav-h);z-index:50;background:rgba(250,248,243,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:var(--serif);font-size:1.35rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.nav-links{list-style:none;margin:0;padding:0;display:flex;gap:2rem}
+.nav-links a{text-decoration:none;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mocha);padding:.4rem 0;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .35s}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-links a.active{color:var(--ink)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:11px;right:11px;height:1px;background:var(--ink);transition:transform .3s,opacity .3s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:900px){
+  .burger{display:block}
+  .nav-links{position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;gap:0;background:var(--ivory);border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1.5rem;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .3s,transform .3s,visibility .3s}
+  .nav-links.open{opacity:1;transform:none;visibility:visible}
+  .nav-links a{display:block;padding:1rem 0;border-bottom:1px solid var(--line);font-size:.8rem}
+  .nav-links a::after{display:none}
+}
+
+/* ===== Hero ===== */
+.hero{min-height:100svh;padding-top:var(--nav-h);display:grid;align-items:center}
+.hero-grid{display:grid;gap:2.5rem;align-items:center;padding:2rem 0 3.5rem}
+.hero h1{font-size:clamp(3rem,10vw,6.4rem);font-weight:400;letter-spacing:.04em;text-transform:uppercase;line-height:.98}
+.hero .title{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,3vw,1.9rem);color:var(--mocha);margin:1.2rem 0 .3rem}
+.hero .tagline{color:var(--mocha);max-width:420px;margin:0 0 2rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero-figure{margin:0;position:relative}
+.hero-figure img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}
+.hero-figure::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--gold);border-radius:calc(var(--radius) + 4px);z-index:-1;opacity:.6}
+.hero-figure figcaption{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--taupe);margin-top:.9rem;text-align:right}
+.badge{display:inline-block;border:1px solid var(--gold);color:var(--gold-text);border-radius:999px;padding:.35rem .9rem;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.6rem}
+@media (min-width:860px){
+  .hero-grid{grid-template-columns:1.05fr .95fr;gap:4.5rem}
+  .hero-figure{max-width:480px;justify-self:end}
+}
+
+/* ===== About ===== */
+.about{background:var(--cream)}
+.about-grid{display:grid;gap:3rem;align-items:start}
+.portrait{margin:0}
+.portrait img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-radius:var(--radius);box-shadow:var(--shadow)}
+.about .intro{font-family:var(--serif);font-size:clamp(1.35rem,2.6vw,1.65rem);line-height:1.45;color:var(--ink);margin:1.5rem 0}
+.about p{margin:0 0 1.1rem}
+.signature{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--mocha);margin-top:1.5rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:2.2rem}
+.stat{padding:1.2rem .6rem;text-align:center}
+.stat+.stat{border-left:1px solid var(--line)}
+.stat b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,4vw,2.2rem);color:var(--ink)}
+.stat span{font-size:.72rem;letter-spacing:.08em;color:var(--mocha)}
+.bakery{display:grid;gap:2rem;margin-top:clamp(3.5rem,8vw,6rem);background:var(--ivory);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.bakery img{width:100%;height:100%;min-height:280px;object-fit:cover}
+.bakery-text{padding:2rem clamp(1.5rem,4vw,3rem) 2.5rem}
+.bakery-text h3{font-size:clamp(1.9rem,4vw,2.6rem)}
+.range{list-style:none;padding:0;margin:1.5rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem}
+@media (min-width:860px){
+  .about-grid{grid-template-columns:.85fr 1.15fr;gap:5rem}
+  .bakery{grid-template-columns:1fr 1.1fr;gap:0}
+  .bakery-text{padding:3.5rem}
+}
+
+/* ===== Tags (shared by skills & lightbox) ===== */
+.tag{display:inline-block;background:var(--ivory);border:1px solid var(--line);color:var(--cocoa);border-radius:999px;padding:.4rem .95rem;font-size:.82rem;line-height:1.3}
+.about .tag{background:var(--cream)}
+
+/* ===== Gallery ===== */
+.gallery-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1.5rem}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin:2.5rem 0 2.2rem}
+.filter{background:transparent;border:1px solid var(--line);color:var(--mocha);border-radius:999px;padding:.6rem 1.1rem;font:400 .8rem/1 var(--sans);letter-spacing:.06em;cursor:pointer;transition:all .25s;min-height:40px}
+.filter:hover{border-color:var(--mocha);color:var(--ink)}
+.filter[aria-pressed="true"]{background:var(--cocoa);border-color:var(--cocoa);color:var(--ivory)}
+.filter .count{opacity:.6;margin-left:.35rem;font-size:.72rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:clamp(1.2rem,2.5vw,2rem)}
+.card{background:none;border:0;padding:0;text-align:left;cursor:pointer;color:inherit;font:inherit;display:flex;flex-direction:column}
+.card-img{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;background:var(--sand);box-shadow:0 12px 28px -20px rgba(59,47,42,.55)}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card-img img,.card:focus-visible .card-img img{transform:scale(1.05)}
+.card-cat{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text);margin:1rem 0 .3rem}
+.card h3{font-size:1.45rem;margin-bottom:.3rem}
+.card p{margin:0;font-size:.9rem;color:var(--mocha);line-height:1.55}
+.card.hide{display:none}
+
+/* ===== Lightbox ===== */
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(36,29,26,.97);display:none;color:var(--ivory)}
+.lightbox.open{display:grid;animation:lbIn .3s ease}
+@keyframes lbIn{from{opacity:0}to{opacity:1}}
+.lb-inner{display:grid;grid-template-rows:minmax(0,1fr) auto;height:100%;width:100%;max-width:1280px;margin:auto;padding:4rem 1rem 1rem}
+.lb-media{display:flex;align-items:center;justify-content:center;min-height:0}
+.lb-media img{max-height:calc(100svh - 300px);max-width:100%;width:auto;object-fit:contain;border-radius:10px;box-shadow:0 30px 60px -30px #000}
+.lb-info{padding:1.2rem .5rem .5rem;max-width:760px;margin-inline:auto;text-align:center}
+.lb-info .card-cat{color:var(--sand);margin-top:0}
+.lb-info h3{color:var(--ivory);font-size:clamp(1.7rem,4vw,2.4rem)}
+.lb-info p{color:#E9E1D6;margin:.5rem 0 1rem;font-size:.95rem}
+.lb-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem}
+.lb-tags .tag{background:transparent;color:var(--sand);border-color:rgba(229,216,199,.35);font-size:.76rem}
+.lb-count{font-size:.72rem;letter-spacing:.2em;color:var(--taupe);margin-top:.9rem}
+.lb-btn{position:absolute;background:rgba(250,248,243,.08);border:1px solid rgba(250,248,243,.25);color:var(--ivory);width:48px;height:48px;border-radius:50%;cursor:pointer;display:grid;place-items:center;transition:background .25s}
+.lb-btn:hover{background:rgba(250,248,243,.2)}
+.lb-close{top:1rem;right:1rem}
+.lb-prev{left:1rem;top:40%}
+.lb-next{right:1rem;top:40%}
+@media (max-width:700px){
+  .lb-inner{padding-top:4.2rem}
+  .lb-prev,.lb-next{top:auto;bottom:1rem;width:44px;height:44px}
+  .lb-info{padding-bottom:4.2rem}
+  .lb-media img{max-height:calc(100svh - 360px)}
+}
+
+/* ===== Experience timeline ===== */
+.experience{background:var(--cream)}
+.timeline{position:relative;margin-top:3.5rem;padding-left:1.8rem}
+.timeline::before{content:"";position:absolute;left:5px;top:.5rem;bottom:.5rem;width:1px;background:var(--gold);opacity:.6}
+.role{position:relative;padding-bottom:3.2rem;display:grid;gap:.8rem}
+.role:last-child{padding-bottom:0}
+.role::before{content:"";position:absolute;left:calc(-1.8rem + 0px);top:.55rem;width:11px;height:11px;border-radius:50%;background:var(--ivory);border:1px solid var(--gold)}
+.role .dates{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);font-weight:500}
+.role h3{font-size:clamp(1.7rem,3.5vw,2.2rem)}
+.role .org{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mocha);margin-top:.3rem}
+.role ul{margin:.4rem 0 0;padding-left:1.1rem;color:var(--cocoa)}
+.role li{margin-bottom:.35rem}
+.role li::marker{color:var(--gold)}
+@media (min-width:860px){
+  .timeline{padding-left:0}
+  .timeline::before{left:220px}
+  .role{grid-template-columns:200px 1fr;gap:0 4rem}
+  .role::before{left:215px}
+  .role .dates{padding-top:.55rem}
+}
+
+/* ===== Skills ===== */
+.skills-grid{display:grid;gap:2.5rem 3rem;margin-top:3rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.skill-group h3{font-size:1.55rem;display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+.skill-group h3 svg{width:22px;height:22px;stroke:var(--gold);flex:none}
+.skill-tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.specialities{margin-top:clamp(3.5rem,8vw,5rem);border-top:1px solid var(--line);padding-top:clamp(2.5rem,6vw,3.5rem)}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:2rem 2.5rem;margin-top:2rem}
+.spec .num{font-family:var(--serif);font-style:italic;color:var(--gold-text);font-size:1.1rem}
+.spec h4{font-family:var(--serif);font-weight:500;font-size:1.4rem;margin:.2rem 0 .3rem;color:var(--ink)}
+.spec p{margin:0;font-size:.9rem;color:var(--mocha)}
+
+/* ===== Contact ===== */
+.contact{background:var(--ink);color:#E9E1D6}
+.contact h2,.contact h3{color:var(--ivory)}
+.contact .eyebrow{color:var(--sand)}
+.contact .eyebrow::before{background:var(--sand)}
+.contact .section-title em{color:var(--sand)}
+.contact-grid{display:grid;gap:3.5rem;margin-top:3rem}
+.contact-list{list-style:none;padding:0;margin:0 0 2.2rem;border-top:1px solid rgba(229,216,199,.2)}
+.contact-list li{border-bottom:1px solid rgba(229,216,199,.2);padding:1.1rem 0;display:grid;grid-template-columns:110px 1fr;gap:1rem;align-items:baseline}
+.contact-list span{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--taupe)}
+.contact-list a{color:var(--ivory);text-decoration:none;font-family:var(--serif);font-size:1.35rem;word-break:break-word}
+.contact-list a:hover{color:var(--sand)}
+.contact .btn{border-color:var(--sand);color:var(--ivory)}
+.contact .btn:hover{background:var(--sand);color:var(--ink)}
+form{display:grid;gap:1.1rem}
+label{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);display:block;margin-bottom:.4rem}
+input,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(229,216,199,.4);color:var(--ivory);font:300 1rem/1.5 var(--sans);padding:.6rem 0;border-radius:0}
+input:focus,textarea:focus{outline:none;border-bottom-color:var(--sand)}
+textarea{min-height:130px;resize:vertical}
+.form-note{font-size:.8rem;color:var(--taupe);margin:0}
+.form-status{font-size:.88rem;color:var(--sand);min-height:1.4em;margin:0}
+.contact .btn-solid{background:var(--sand);color:var(--ink);border-color:var(--sand);justify-self:start}
+.contact .btn-solid:hover{background:var(--ivory)}
+@media (min-width:860px){.contact-grid{grid-template-columns:1fr 1fr;gap:6rem}}
+footer{background:var(--ink);color:var(--taupe);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;border-top:1px solid rgba(229,216,199,.15)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding:1.8rem 0}
+footer a{color:var(--taupe);text-decoration:none}
+footer a:hover{color:var(--sand)}
+
+/* ===== Scroll fade-in ===== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .card-img img,.lightbox.open{transition:none;animation:none}
+}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#home">Divya</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#creations">Creations</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===== 1. HERO ===== -->
+<section class="hero" id="home" aria-label="Introduction">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="badge">100% Eggless Patisserie</span>
+      <!-- EDIT: name, title and tagline -->
+      <h1>Divya<br>Chaudhary</h1>
+      <p class="title">Pastry Chef · Founder, Eternal Blaze Bakeshoppe by Divya</p>
+      <p class="tagline">A portfolio of craft, creativity &amp; patisserie — celebration cakes, chocolate, breads, pastries and desserts.</p>
+      <div class="cta">
+        <a class="btn btn-solid" href="#creations">View my work</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <figure class="hero-figure reveal">
+      <!-- EDIT: hero photo -->
+      <img src="images/Black%20rose%20Fondant.jpg" width="1050" height="1400" fetchpriority="high"
+           alt="Tall black fondant cake wrapped in layered ruffles edged in gold, studded with gold spheres, on a gold cake stand">
+      <figcaption>Black &amp; gold fondant cake</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 2. ABOUT ===== -->
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <figure class="portrait reveal">
+        <img src="images/Divya%20Chaudhary.jpg" loading="lazy" width="1052" height="1400"
+             alt="Divya Chaudhary smiling in a black chef's jacket and striped apron, standing at a white kitchen counter">
+      </figure>
+      <div class="reveal">
+        <p class="eyebrow">01 · About me</p>
+        <h2 class="section-title">A love for baking,<br><em>a joy in creating.</em></h2>
+        <!-- EDIT: bio (taken from the PDF) -->
+        <p class="intro">I am a professionally trained pastry chef working across celebration cakes, chocolate, breads, pastries and desserts — with every product made 100% eggless.</p>
+        <p>My experience comes from two kitchens. At Cakes N Creams Baking Academy in Mohali, I worked on customised customer orders, taking each creation from preparation to final finish while maintaining quality, consistency, and attention to detail. In June 2023, I founded Eternal Blaze Bakeshoppe by Divya, an independent home bakery that I run myself, handling everything from product development and baking to decoration and order management. These experiences have shaped my approach to pastry — combining creativity with practical skills, precision, and a genuine passion for creating thoughtfully made products.</p>
+        <p class="signature">Divya Chaudhary</p>
+        <div class="stats">
+          <div class="stat"><b>2023</b><span>Founded Eternal Blaze</span></div>
+          <div class="stat"><b>2025–26</b><span>Pastry Chef, Cakes N Creams</span></div>
+          <div class="stat"><b>100%</b><span>Eggless production</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bakery reveal">
+      <img src="images/Banana%20walnut%20cake.jpg" loading="lazy" width="1050" height="1400"
+           alt="Banana walnut cake on a gold-footed stand with slices and walnut halves arranged around it">
+      <div class="bakery-text">
+        <p class="eyebrow">The bakery</p>
+        <h3>Eternal Blaze Bakeshoppe <em>by Divya</em></h3>
+        <p class="lede">An independent home bakery I founded in June 2023 and run myself. Everything is handcrafted, homemade and 100% eggless.</p>
+        <p style="margin-top:1rem">Each order is handled personally, from developing the recipe to baking, decoration, quality control and delivery.</p>
+        <ul class="range" aria-label="The range">
+          <li class="tag">Customised cakes</li><li class="tag">Cookies &amp; brownies</li><li class="tag">Breads</li>
+          <li class="tag">Cheesecakes &amp; tarts</li><li class="tag">Cupcakes &amp; tea-time bakes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3 & 4. SIGNATURE CREATIONS + FILTERS ===== -->
+<section class="section" id="creations">
+  <div class="wrap">
+    <div class="gallery-head reveal">
+      <div>
+        <p class="eyebrow">02 · Signature creations</p>
+        <h2 class="section-title">From the <em>pastry bench</em></h2>
+      </div>
+      <p class="lede" style="max-width:420px">Every piece shown here is my own work, made 100% eggless. Select any dish to see it larger with the techniques behind it.</p>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filter creations by category"></div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ===== 5. EXPERIENCE ===== -->
+<section class="section experience" id="experience">
+  <div class="wrap">
+    <p class="eyebrow reveal">03 · Professional experience</p>
+    <h2 class="section-title reveal">Two kitchens, <em>one craft</em></h2>
+    <!-- EDIT: roles and dates -->
+    <div class="timeline">
+      <article class="role reveal">
+        <p class="dates" style="margin:0">January 2025 — October 2026</p>
+        <div>
+          <h3>Pastry Chef</h3>
+          <p class="org" style="margin-bottom:.6rem">Cakes N Creams Baking Academy · Mohali, India</p>
+          <ul>
+            <li>Prepared and executed customer cake orders, delivering high-quality products on time.</li>
+            <li>Created customised cakes to individual customer requirements, preferences and design specifications.</li>
+            <li>Handled end-to-end cake preparation, decoration, finishing and presentation.</li>
+            <li>Managed day-to-day production and coordinated preparation schedules to meet customer deadlines.</li>
+            <li>Maintained consistent quality, taste, texture and visual presentation across multiple orders.</li>
+            <li>Followed kitchen hygiene, food safety and cleanliness standards throughout preparation and production.</li>
+            <li>Delivered practical baking instruction.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="role reveal">
+        <p class="dates" style="margin:0">June 2023 — Present</p>
+        <div>
+          <h3>Founder &amp; Baker</h3>
+          <p class="org" style="margin-bottom:.6rem">Eternal Blaze Bakeshoppe by Divya</p>
+          <ul>
+            <li>Founded and independently run a home bakery specialising in handcrafted, 100% eggless baked products.</li>
+            <li>Develop and bake customised cakes, cookies, brownies, cheesecakes, breads, muffins, cupcakes, tarts and desserts.</li>
+            <li>Handle cake decoration, icing, fondant work and chocolate-based preparations.</li>
+            <li>Develop new products and refine existing recipes through flavour and ingredient testing.</li>
+            <li>Manage the full process, from ingredient sourcing, inventory and production planning to finishing and packaging.</li>
+            <li>Schedule multiple orders around customer requirements and deadlines while keeping quality and presentation consistent.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. SKILLS & TECHNIQUES ===== -->
+<section class="section" id="skills">
+  <div class="wrap">
+    <p class="eyebrow reveal">04 · Skills &amp; techniques</p>
+    <h2 class="section-title reveal">Skills at <em>the bench</em></h2>
+    <p class="lede reveal">Grouped by the stage of work, from mixing and baking through to finishing, production and teaching.</p>
+    <div class="skills-grid" id="skills-grid"></div>
+
+    <div class="specialities">
+      <p class="eyebrow reveal">Areas of expertise</p>
+      <h2 class="section-title reveal" style="font-size:clamp(2rem,4.5vw,2.8rem)">A broad <em>repertoire</em></h2>
+      <div class="spec-grid" id="spec-grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. AWARDS & PRESS — left out on purpose: the PDF lists none.
+     EDIT: if you add awards or press later, add a section here and a nav link. -->
+
+<!-- ===== 8. CONTACT ===== -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow reveal">05 · Contact</p>
+    <h2 class="section-title reveal">Let's create <em>something together</em></h2>
+    <div class="contact-grid">
+      <div class="reveal">
+        <!-- EDIT: contact details -->
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:chaudhary.divya524@gmail.com">chaudhary.divya524@gmail.com</a></li>
+          <li><span>Phone</span><a href="tel:+64211144920">+64 21 114 4920</a></li>
+          <li><span>Instagram</span><a href="https://www.instagram.com/eternal_blaze_/" target="_blank" rel="noopener">@eternal_blaze_</a></li>
+        </ul>
+        <!-- EDIT: put your PDF next to this file and name it portfolio.pdf -->
+        <a class="btn" href="portfolio.pdf" download>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
+          Download PDF Portfolio
+        </a>
+      </div>
+      <form id="contact-form" class="reveal" novalidate>
+        <div><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-email">Your email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
+        <p class="form-note">Sending opens your email app with the message ready to go.</p>
+        <button class="btn btn-solid" type="submit">Send message</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Divya Chaudhary · Pastry Chef</span>
+    <a href="#home">Back to top ↑</a>
+  </div>
+</footer>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" aria-hidden="true">
+  <button class="lb-btn lb-close" id="lb-close" aria-label="Close">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous dish">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Next dish">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <div class="lb-inner">
+    <div class="lb-media"><img id="lb-img" src="" alt=""></div>
+    <div class="lb-info">
+      <p class="card-cat" id="lb-cat"></p>
+      <h3 id="lb-title"></h3>
+      <p id="lb-desc"></p>
+      <div class="lb-tags" id="lb-tags"></div>
+      <p class="lb-count" id="lb-count"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   EDIT YOUR DISHES HERE
+   Each dish: name, category, description (one line on the card),
+   details (longer text in the lightbox), techniques (tags in the
+   lightbox), photo (exact file name inside the /images folder),
+   alt (describes the photo for screen readers).
+   Add, remove or reorder items freely. Categories with no dishes
+   are hidden from the filter buttons automatically.
+   ===================================================================== */
+const DISHES = [
+  // ---------- Cakes ----------
+  {name:"Three-Tier Wedding Cake", category:"Cakes", photo:"3 Tier Wedding Cake.jpg",
+   description:"Mint fondant tiers with lace texture and fresh white florals.",
+   details:"Mint fondant tiers with lace texture, a fluted middle tier, piped scrollwork and fresh white florals.",
+   techniques:["Fondant covering","Lace texture","Fluted tier","Piped scrollwork","Fresh florals"],
+   alt:"Three-tier mint green wedding cake with lace-textured and fluted tiers, white piped scrollwork and white flowers"},
+  {name:"Just Married Cake", category:"Cakes", photo:"Just Married Cake.jpg",
+   description:"Two tiers with a couple topper and a half-buttercream, half-fondant gown.",
+   details:"Two-tier cake with a couple topper. The bride's gown is piped in buttercream rosettes on one side and draped in fondant on the other.",
+   techniques:["Buttercream rosettes","Fondant draping","Two-tier construction","Topper"],
+   alt:"Two-tier white wedding cake with a couple topper; the gown is brown buttercream rosettes on one side and draped lilac fondant on the other"},
+  {name:"Floral Wedding Cake", category:"Cakes", photo:"2 tier wedding cake.jpg",
+   description:"Watercolour buttercream with fresh roses.",
+   details:"Two-tier wedding cake in watercolour buttercream, finished with fresh roses. Fresh florals are planned with the client to suit the occasion and the setting.",
+   techniques:["Watercolour buttercream","Fresh florals","Two-tier construction"],
+   alt:"Two-tier white cake with soft pink watercolour buttercream and fresh peach and white roses on a gold board"},
+  {name:"Floral Anniversary Cake", category:"Cakes", photo:"floral-brushstroke-anniversary.jpg",
+   description:"Brushstroke buttercream with fresh roses.",
+   details:"Anniversary cake in brushstroke buttercream, finished with fresh roses and a topper.",
+   techniques:["Brushstroke buttercream","Fresh florals","Topper"],
+   alt:"White anniversary cake with pink brushstroke buttercream, fresh pink roses and a gold Happy Anniversary topper"},
+  {name:"Rice Paper Feather Cake", category:"Cakes", photo:"Rice paper feather theme cake.jpg",
+   description:"Shaped rice-paper sails over a soft pink finish.",
+   details:"Shaped rice-paper sails over a soft pink finish. Rice paper adds height, movement and translucency without weighing a cake down.",
+   techniques:["Rice paper","Shaped sails","Buttercream finish"],
+   alt:"Tall pink cake topped with shaped magenta and white rice-paper feathers"},
+  {name:"Wafer Paper Cake", category:"Cakes", photo:"waffer paper cake.jpg",
+   description:"Pleated wafer-paper wrap crowned with roses.",
+   details:"Pleated wafer-paper wrap crowned with roses — a delicate, contemporary finish.",
+   techniques:["Wafer paper","Pleating","Fresh florals"],
+   alt:"White cake wrapped in pleated wafer paper, crowned with pink roses and baby's breath, on a dark background"},
+  {name:"Neapolitan Cake", category:"Cakes", photo:"Neapolitan Cake.jpg",
+   description:"Painted vine detailing and flower decorations.",
+   details:"Painted vine detailing and flower decorations on a smooth finish.",
+   techniques:["Hand painting","Sugar flowers","Smooth finish"],
+   alt:"Beige cake with hand-painted brown vines and mauve flower decorations on top"},
+  {name:"Palette-Knife Florals", category:"Cakes", photo:"palette-knife-florals.jpg",
+   description:"Sculpted buttercream petals with gold-leaf accents.",
+   details:"Sculpted palette-knife buttercream petals with gold-leaf accents.",
+   techniques:["Palette-knife buttercream","Gold leaf"],
+   alt:"White cake decorated with deep teal palette-knife buttercream flowers and gold leaf"},
+  {name:"Vintage Heart with Berries", category:"Cakes", photo:"vintage-heart-berries.jpg",
+   description:"Piped borders and roses, topped with fresh berries.",
+   details:"Heart-shaped vintage cake with piped borders and roses, topped with fresh berries.",
+   techniques:["Vintage piping","Piped roses","Fresh fruit"],
+   alt:"Heart-shaped white cake with pink piped borders and red roses, topped with strawberries and blueberries"},
+  {name:"Floral Wreath Cake", category:"Cakes", photo:"floral-wreath-cake.jpg",
+   description:"Hand-piped blossom wreath with orchids.",
+   details:"Hand-piped blossom wreath with orchids.",
+   techniques:["Buttercream piping","Floral wreath","Orchids"],
+   alt:"White cake topped with a wreath of hand-piped red blossoms and pink orchids"},
+  {name:"White Rose Cake", category:"Cakes", photo:"white-rose-cake.jpg",
+   description:"Fresh white roses and a piped pearl border.",
+   details:"Fresh white roses and a piped pearl border.",
+   techniques:["Fresh florals","Pearl border piping"],
+   alt:"White cake with a cascade of fresh white roses and a piped pearl border"},
+  {name:"Chocolate Truffle Cake", category:"Cakes", photo:"Chocolate Truffle Cake.jpg",
+   description:"Ganache drip with chocolate decorations.",
+   details:"Glossy ganache drip with chocolate flowers, leaves and lustred spheres — building texture and depth using chocolate.",
+   techniques:["Ganache drip","Chocolate flowers","Lustred spheres"],
+   alt:"Chocolate truffle cake with a ganache drip, chocolate flowers and gold-lustred spheres and a Happy Birthday topper"},
+  {name:"Caramel Truffle Cake", category:"Cakes", photo:"Caramel Truffle Cake.jpg",
+   description:"Swirled glaze, drip edge and gold flecks.",
+   details:"Swirled glaze, drip edge and gold flecks.",
+   techniques:["Glaze","Drip finish","Gold flecks"],
+   alt:"Round chocolate caramel cake with a swirled glossy glaze, drip edge and gold flecks"},
+  {name:"Truffle Cake", category:"Cakes", photo:"Truffle Cake.jpg",
+   description:"Chocolate sails, bars and a ganache drip.",
+   details:"Chocolate sails, bars and a ganache drip.",
+   techniques:["Chocolate sails","Chocolate bars","Ganache drip"],
+   alt:"Truffle cake topped with tall chocolate sails, chocolate bars and gold decorations with a ganache drip"},
+  {name:"Corporate Anniversary Cake", category:"Cakes", photo:"40 Years Labview Cake.jpg",
+   description:"Brand-themed fondant cake marking 40 years of a software platform.",
+   details:"Brand-themed fondant cake marking 40 years of a software platform, with a logo plaque, icon tiles and a piped border.",
+   techniques:["Fondant","Logo plaque","Icon tiles","Piped border"],
+   alt:"White fondant cake with a yellow and black 40th anniversary logo plaque and small icon tiles around the side"},
+  {name:"Music Theme Cake", category:"Cakes", photo:"Piano Music theme cake.jpg",
+   description:"Gold notes and piano keys.",
+   details:"Themed celebration cake with gold music notes and piano keys.",
+   techniques:["Fondant detailing","Gold finish","Themed design"],
+   alt:"Pale blue cake with black and white piano keys and gold music notes on top"},
+  {name:"Fondant Bow Cake", category:"Cakes", photo:"Pink bow cake.jpg",
+   description:"Draped fondant bow, polka hearts.",
+   details:"Draped fondant bow with polka hearts.",
+   techniques:["Fondant draping","Fondant bow"],
+   alt:"Cake wrapped like a gift in pink fondant with white polka hearts and a large draped bow"},
+  {name:"50th Anniversary Cake", category:"Cakes", photo:"50 Anniversary Cake.jpg",
+   description:"Couple topper, fresh roses.",
+   details:"50th anniversary cake with a couple topper and fresh roses.",
+   techniques:["Modelled topper","Fresh florals","Piped lettering"],
+   alt:"White anniversary cake with an elderly couple topper on a sofa and white roses at the base"},
+  {name:"Jungle Theme Cake", category:"Cakes", photo:"jungle-theme-cake.jpg",
+   description:"Modelled fondant animals.",
+   details:"Hand-modelled fondant animals for a children's birthday.",
+   techniques:["Fondant modelling","Themed design"],
+   alt:"Birthday cake surrounded by hand-modelled fondant jungle animals including a lion, giraffe and zebra"},
+  {name:"Castle Cake", category:"Cakes", photo:"Princess Castle Cake.jpg",
+   description:"Fondant turrets and detailing.",
+   details:"Princess castle cake with fondant turrets and detailing.",
+   techniques:["Fondant structures","Themed design"],
+   alt:"Pink and pale blue fondant castle cake with conical turrets and gold flags"},
+  {name:"Sky Theme Cake", category:"Cakes", photo:"Sky theme cake.jpg",
+   description:"Clouds, balloons and a plane topper.",
+   details:"Clouds, balloons and a plane topper.",
+   techniques:["Fondant modelling","Themed design"],
+   alt:"Peach cake with fondant clouds, a hot-air balloon and a blue aeroplane topper"},
+  {name:"Half Birthday Cake", category:"Cakes", photo:"Teddy half birthday Cake.jpg",
+   description:"Modelled teddy bears.",
+   details:"Half birthday cake with modelled teddy bears.",
+   techniques:["Fondant modelling","Topper"],
+   alt:"White half-birthday cake with modelled teddy bears, a ladder and a gold Half Way topper"},
+  {name:"Twins' First Birthday", category:"Cakes", photo:"Twins 1st birthday.jpg",
+   description:"Paired teddy toppers, ombré finish.",
+   details:"Paired teddy toppers over an ombré finish.",
+   techniques:["Ombré buttercream","Modelled toppers"],
+   alt:"Pink ombré cake with two teddy-bear toppers holding a number one and pink spheres"},
+  {name:"Farm Theme Cake", category:"Cakes", photo:"farm-theme-cake.jpg",
+   description:"Fondant tractor and picket fence.",
+   details:"Fondant tractor and picket fence.",
+   techniques:["Fondant modelling","Themed design"],
+   alt:"White cake with a chocolate picket fence, a green fondant tractor and a number eight"},
+  {name:"Fine-Line Anniversary Cake", category:"Cakes", photo:"fine-line-anniversary-cake.jpg",
+   description:"Smooth finish, gold-edged rim and hand-piped script.",
+   details:"Smooth finish, gold-edged rim and hand-piped script. Restraint is a technique too: clean edges, a single detail and space to breathe.",
+   techniques:["Smooth finish","Gold edging","Fine-line piping"],
+   alt:"Minimal white cake with a gold-edged rim and fine hand-piped script and a date on top"},
+  {name:"Textured Ivory Cake", category:"Cakes", photo:"textured-ivory-cake.jpg",
+   description:"Combed buttercream, white florals and dried pampas.",
+   details:"Combed buttercream, white florals and dried pampas.",
+   techniques:["Combed buttercream","Dried florals"],
+   alt:"Ivory cake with combed horizontal buttercream texture, white flowers and dried pampas grass"},
+
+  // ---------- Chocolate & Confectionery ----------
+  {name:"Blueberry Centre-Filled Chocolates", category:"Chocolate & Confectionery", photo:"Blueberry Center filled chocolates.jpg",
+   description:"Swirled shells with marbled colour.",
+   details:"Centre-filled chocolates with swirled shells and marbled colour — small pieces where precision really shows.",
+   techniques:["Shell moulding","Centre filling","Marbled colour"],
+   alt:"Round white and blue marbled centre-filled chocolates arranged on a leaf-shaped platter"},
+  {name:"Coffee Centre-Filled Bars", category:"Chocolate & Confectionery", photo:"Center filled coffee bon-bon.jpg",
+   description:"Dark chocolate with a fine drizzle and gold leaf.",
+   details:"Dark chocolate bars with a coffee centre, a fine drizzle and gold leaf.",
+   techniques:["Bar moulding","Centre filling","Drizzle","Gold leaf"],
+   alt:"Dark chocolate bars with fine chocolate drizzle and gold leaf on a white plate"},
+  {name:"Rose Pistachio Fudge", category:"Chocolate & Confectionery", photo:"Rose Pistachio Fudge.jpg",
+   description:"Layered fudge under chocolate, with rose petals and pistachio.",
+   details:"Layered fudge under chocolate, with rose petals and pistachio.",
+   techniques:["Layered fudge","Chocolate topping"],
+   alt:"Close-up of layered fudge squares topped with chocolate, dried rose petals and slivered pistachio"},
+  {name:"Homemade Date Bites", category:"Chocolate & Confectionery", photo:"Homemade Dates Snickers.jpg",
+   description:"Chocolate-coated dates with a contrasting drizzle.",
+   details:"Chocolate-coated dates with a contrasting drizzle.",
+   techniques:["Chocolate coating","Drizzle"],
+   alt:"Chocolate-coated date bites with white chocolate drizzle on a plate"},
+  {name:"Coconut Fudge", category:"Chocolate & Confectionery", photo:"Coconut Fudge.jpg",
+   description:"Soft-set squares with a coconut finish.",
+   details:"Soft-set squares with a coconut finish.",
+   techniques:["Fudge","Setting"],
+   alt:"White coconut fudge squares stacked on a pale blue plate"},
+
+  // ---------- Breads ----------
+  {name:"Sourdough Loaves", category:"Breads", photo:"Sourdough Loafs.jpg",
+   description:"Tin-baked loaves with a sesame crust.",
+   details:"Tin-baked sourdough loaves with a sesame crust. This side of my work is about dough, shaping, crust and crumb.",
+   techniques:["Sourdough","Tin baking","Seeded crust"],
+   alt:"Two golden tin-baked sourdough loaves with sesame crusts"},
+  {name:"Seeded White Loaf", category:"Breads", photo:"White Bread.jpg",
+   description:"An even, close crumb under a seeded crust.",
+   details:"Sliced to show an even, close crumb under a seeded crust.",
+   techniques:["Yeasted dough","Shaping","Seeded crust"],
+   alt:"Sliced white loaf with a seeded crust on a wooden board beside a plate of bread"},
+  {name:"Cinnamon Rolls", category:"Breads", photo:"Cinnamon Rolls.jpg",
+   description:"Soft enriched dough with an even swirl.",
+   details:"Soft enriched dough with an even cinnamon swirl.",
+   techniques:["Enriched dough","Rolling & shaping"],
+   alt:"Tray of golden cinnamon rolls with even spirals"},
+  {name:"Garlic Buns", category:"Breads", photo:"Garlic Buns.jpg",
+   description:"Pull-apart buns with a herbed top.",
+   details:"Pull-apart buns with a herbed top.",
+   techniques:["Enriched dough","Pull-apart shaping"],
+   alt:"Two round tins of pull-apart garlic buns with a herbed golden top"},
+  {name:"Sub Rolls", category:"Breads", photo:"sub-rolls.jpg",
+   description:"Seeded rolls, filled to order.",
+   details:"Seeded sub rolls baked from scratch and filled to order.",
+   techniques:["Yeasted dough","Shaping"],
+   alt:"Two long seeded sub rolls filled with vegetables on a white platter"},
+  {name:"Stuffed Garlic Bread", category:"Breads", photo:"Stuffed garlic Bread.jpg",
+   description:"Folded, scored and baked.",
+   details:"Folded, scored and baked stuffed garlic bread.",
+   techniques:["Folding","Scoring"],
+   alt:"Golden folded stuffed garlic bread on a white plate"},
+  {name:"Burger Buns", category:"Breads", photo:"Burgers from scratch.jpg",
+   description:"Soft sesame-topped buns.",
+   details:"Soft sesame-topped burger buns made from scratch.",
+   techniques:["Enriched dough","Shaping"],
+   alt:"Two burgers in soft sesame-topped buns on a wooden board"},
+
+  // ---------- Pastries & Tarts ----------
+  {name:"Opera Pastry", category:"Pastries & Tarts", photo:"Opera Pastry.jpg",
+   description:"Layered sponge and chocolate, piped rosettes and hazelnuts.",
+   details:"Layered sponge and chocolate, finished with piped rosettes and hazelnuts.",
+   techniques:["Layered sponge","Chocolate layers","Piping"],
+   alt:"Slices of layered opera pastry topped with piped chocolate rosettes and hazelnuts"},
+  {name:"Chocolate Tart Selection", category:"Pastries & Tarts", photo:"Chocolate Tarts.jpg",
+   description:"Chocolate shortcrust in round, square and finger shapes.",
+   details:"Chocolate shortcrust in round, square and finger shapes, finished with hazelnuts and piped filling.",
+   techniques:["Chocolate shortcrust","Blind baking","Piped filling"],
+   alt:"Assorted chocolate tarts in round, square and finger shapes with hazelnut toppings on a white platter"},
+  {name:"Rose Pistachio Tart", category:"Pastries & Tarts", photo:"Rose Pistachio Tart.jpg",
+   description:"Piped cream, rose petals and pistachio.",
+   details:"Finger tart with piped cream, rose petals and pistachio.",
+   techniques:["Shortcrust","Piping","Garnishing"],
+   alt:"Long finger tart with piped cream rosettes, rose petals and pistachios on a blue plate"},
+  {name:"Lemon & Cream Tarts", category:"Pastries & Tarts", photo:"lemon-cream-tarts.jpg",
+   description:"Lemon tart with meringue kisses.",
+   details:"Lemon tart with meringue kisses, served alongside cream tarts.",
+   techniques:["Shortcrust","Lemon curd","Meringue"],
+   alt:"Round lemon tart with meringue kisses beside a cream finger tart on a blue plate"},
+  {name:"Plated Chocolate Tart", category:"Pastries & Tarts", photo:"Chocolate Tart.jpg",
+   description:"Chocolate filling, piped crown and dried berries.",
+   details:"Chocolate filling, piped crown and dried berries.",
+   techniques:["Shortcrust","Chocolate filling","Plating"],
+   alt:"Wedge of chocolate tart with a piped crown, plated with dried cranberries and nuts on a doily"},
+  {name:"Lattice Apple Pie", category:"Pastries & Tarts", photo:"Apple pie.jpg",
+   description:"Woven lattice top with a golden bake.",
+   details:"Woven lattice top with a golden bake.",
+   techniques:["Pie crust","Lattice weaving"],
+   alt:"Golden apple pie with a woven lattice top on a stand"},
+  {name:"Butterscotch Pastry", category:"Pastries & Tarts", photo:"Butterscotch pastry.jpg",
+   description:"Layered chocolate sponge, cream and butterscotch.",
+   details:"Layered chocolate sponge, cream and butterscotch.",
+   techniques:["Layered sponge","Cream filling","Piping"],
+   alt:"Slice of layered chocolate sponge pastry with cream and butterscotch on a plate"},
+  {name:"Cream Roll Puffs", category:"Pastries & Tarts", photo:"Cream roll puffs.jpg",
+   description:"Puff pastry horns with a cream filling.",
+   details:"Puff pastry horns with a cream filling.",
+   techniques:["Puff pastry","Lamination","Cream filling"],
+   alt:"Golden puff pastry cream horns on a wooden board"},
+  {name:"Spinach Quiche", category:"Pastries & Tarts", photo:"Spinach Quiche.jpg",
+   description:"Shortcrust case in large and individual sizes.",
+   details:"Savoury shortcrust case in large and individual sizes.",
+   techniques:["Shortcrust","Savoury filling"],
+   alt:"Large spinach quiche and two small individual quiches on a cooling rack"},
+  {name:"Mushroom Vol-au-Vents", category:"Pastries & Tarts", photo:"Mashroom Volauvents.jpg",
+   description:"Square puff pastry cases with a mushroom filling.",
+   details:"Square puff pastry cases with a mushroom filling.",
+   techniques:["Puff pastry","Lamination","Savoury filling"],
+   alt:"Square puff pastry vol-au-vents with mushroom filling on a white plate"},
+  {name:"Puff Pastries", category:"Pastries & Tarts", photo:"Puff Pastries.jpg",
+   description:"Flaky laminated pastry with a savoury filling.",
+   details:"Flaky laminated pastry with a savoury filling, cooling on the rack.",
+   techniques:["Puff pastry","Lamination"],
+   alt:"Golden flaky savoury puff pastries cooling on a wire rack"},
+
+  // ---------- Entremets & Desserts ----------
+  {name:"Chocolate Hazelnut Entremet", category:"Entremets & Desserts", photo:"Chocolet Hazelnut Entremet.jpg",
+   description:"Glossy glazed dome contrasted with a velvet-textured half.",
+   details:"Signature piece: a glossy glazed dome contrasted with a velvet-textured half, finished with curved chocolate garnishes and gold leaf.",
+   techniques:["Entremet","Mirror glaze","Velvet finish","Chocolate garnish","Gold leaf"],
+   alt:"Chocolate hazelnut entremet dome, half glossy and half velvet-textured, with curved chocolate garnishes and gold leaf"},
+  {name:"Chocolate Dome Entremet", category:"Entremets & Desserts", photo:"Entremet.jpg",
+   description:"Chocolate dome with gold leaf.",
+   details:"Chocolate dome entremet finished with chocolate garnish and gold leaf.",
+   techniques:["Entremet","Chocolate garnish","Gold leaf"],
+   alt:"Chocolate dome entremet with a chocolate swirl garnish and gold leaf on a dark board"},
+  {name:"Chocolate Cookie Cheesecake", category:"Entremets & Desserts", photo:"chocolate-cookie-cheesecake.jpg",
+   description:"Chocolate mousse layer on a cookie base, topped with strawberries.",
+   details:"Set chocolate mousse layer on a cookie base, topped with strawberries.",
+   techniques:["Set cheesecake","Mousse","Cookie base"],
+   alt:"Round chocolate mousse cheesecake on a cookie base topped with sliced strawberries"},
+  {name:"Triple Chocolate Baked Cheesecake", category:"Entremets & Desserts", photo:"Triple Chocolate baked cheesecake.jpg",
+   description:"Three chocolate layers, baked.",
+   details:"Triple chocolate baked cheesecake.",
+   techniques:["Baked cheesecake","Layering"],
+   alt:"Slice of triple chocolate baked cheesecake showing dark, milk and white chocolate layers"},
+  {name:"Mango Cheesecake", category:"Entremets & Desserts", photo:"Mango Cheesecake.jpg",
+   description:"Set cheesecake with a mango swirl.",
+   details:"Set cheesecake with a mango swirl.",
+   techniques:["Set cheesecake","Fruit swirl"],
+   alt:"Round set cheesecake with a yellow mango swirl on a glass stand"},
+  {name:"Chocolate Hazelnut Cupcakes", category:"Entremets & Desserts", photo:"Chocolate Hazelnut Cupcakes.jpg",
+   description:"Piped chocolate buttercream with hazelnuts.",
+   details:"Piped chocolate buttercream with hazelnuts and chocolate garnish.",
+   techniques:["Cupcakes","Buttercream piping","Chocolate garnish"],
+   alt:"Chocolate cupcakes with piped chocolate buttercream, hazelnuts and chocolate garnish on blue plates"},
+  {name:"Rasmalai Tres Leches", category:"Entremets & Desserts", photo:"Rasmalai Tres Leches cake.jpg",
+   description:"Rose petals and pistachio.",
+   details:"Rasmalai tres leches finished with rose petals and pistachio.",
+   techniques:["Soaked sponge","Fusion flavours"],
+   alt:"Rasmalai tres leches cake covered in cream, dried rose petals and pistachio slivers"},
+  {name:"Cheesecake Cups", category:"Entremets & Desserts", photo:"Cheesecake shots.jpg",
+   description:"Layered single servings.",
+   details:"Layered single-serving cheesecake cups.",
+   techniques:["Dessert cups","Layering"],
+   alt:"Individual cheesecake cups topped with cream and chocolate shavings on a wooden board"},
+  {name:"Red Velvet Cupcakes", category:"Entremets & Desserts", photo:"Red Valvet Cupcakes.jpg",
+   description:"Piped cream cheese frosting.",
+   details:"Red velvet cupcakes with piped cream cheese frosting.",
+   techniques:["Cupcakes","Cream cheese frosting","Piping"],
+   alt:"Red velvet cupcakes with swirls of white cream cheese frosting on a white plate"},
+
+  // ---------- Cookies ----------
+  {name:"Double Choc Chip Cookies", category:"Cookies", photo:"Double choco chip cookies.jpg",
+   description:"Classic cookies, baked in batches for gift boxes.",
+   details:"Double choc chip cookies. Cookies are a mainstay of the bakery, baked in batches for gift boxes and everyday orders.",
+   techniques:["Cookie dough","Batch baking"],
+   alt:"Plates of choc chip cookies with a glass of milk"},
+  {name:"Cream Cheese–Filled Red Velvet Cookies", category:"Cookies", photo:"Creamcheese filled red velvet cookies.jpg",
+   description:"Filled red velvet cookies.",
+   details:"Red velvet cookies with a cream cheese filling.",
+   techniques:["Filled cookies"],
+   alt:"Red velvet cookies broken open to show a cream cheese centre, with lavender sprigs"},
+  {name:"Choco Chunk Cookies", category:"Cookies", photo:"choco-chunk-cookies.jpg",
+   description:"Dark chocolate cookies with chunks.",
+   details:"Choco chunk cookies.",
+   techniques:["Cookie dough"],
+   alt:"Row of dark chocolate chunk cookies on a long white platter"},
+  {name:"Piped Nutella Cookies", category:"Cookies", photo:"Nutella Cookies.jpg",
+   description:"Piped cookies.",
+   details:"Piped Nutella cookies.",
+   techniques:["Piped cookies"],
+   alt:"Piped chocolate Nutella cookies arranged on an oval white platter"},
+  {name:"Turkish Pistachio Cookies", category:"Cookies", photo:"Turkish Pistachio Cookies.jpg",
+   description:"Piped pistachio cookies.",
+   details:"Turkish pistachio cookies.",
+   techniques:["Piped cookies"],
+   alt:"Orange and green piped Turkish pistachio cookies on an oval white platter"},
+  {name:"Jeera Cookies", category:"Cookies", photo:"Jeera Cookies.jpg",
+   description:"Traditional Indian cookies.",
+   details:"Jeera (cumin) cookies — part of the traditional Indian cookie range.",
+   techniques:["Traditional Indian cookies"],
+   alt:"Jeera cookies on an oval platter styled with ceramic vases and linen"},
+  {name:"Nan Khatai", category:"Cookies", photo:"Naan-Khatai.jpg",
+   description:"Traditional Indian shortbread.",
+   details:"Nan khatai — part of the traditional Indian cookie range.",
+   techniques:["Traditional Indian cookies"],
+   alt:"Golden nan khatai cookies with almonds on an oval platter"},
+  {name:"Oatmeal Cookies", category:"Cookies", photo:"Oatmeal Cookies.jpg",
+   description:"Wholesome everyday cookies.",
+   details:"Oatmeal cookies.",
+   techniques:["Cookie dough"],
+   alt:"Oatmeal cookies on a round white plate"},
+  {name:"Oat & Cranberry Cookies", category:"Cookies", photo:"Oats Cranberry Cookies.jpg",
+   description:"Wholesome cookies with cranberries.",
+   details:"Oat and cranberry cookies.",
+   techniques:["Cookie dough"],
+   alt:"Stack of oat and cranberry cookies with dried cranberries scattered around"},
+
+  // ---------- Tea-Time Bakes ----------
+  {name:"Whole Wheat Tea Cake", category:"Tea-Time Bakes", photo:"whole wheat tea time cake.jpg",
+   description:"An everyday bake with a moist crumb.",
+   details:"Dry cakes, loaves, scones and muffins: everyday bakes where consistency, a moist crumb and an even bake matter most.",
+   techniques:["Tea-time cake","Even bake"],
+   alt:"Whole wheat tea cake topped with sliced almonds on a doily"},
+  {name:"Tutti Frutti Cake", category:"Tea-Time Bakes", photo:"Tutti fruti dry cake.jpg",
+   description:"Classic dry cake.",
+   details:"Tutti frutti dry cake.",
+   techniques:["Dry cake"],
+   alt:"Round tutti frutti cake studded with red and green candied fruit on a lace doily"},
+  {name:"Pineapple Upside-Down Cake", category:"Tea-Time Bakes", photo:"Pineapple upside down cake.jpg",
+   description:"Caramelised pineapple top.",
+   details:"Pineapple upside-down cake.",
+   techniques:["Upside-down cake"],
+   alt:"Pineapple upside-down cake with pineapple rings and cherries on a cake board"},
+  {name:"Rose Berry Bundt", category:"Tea-Time Bakes", photo:"Rose Berry Bundt Cake.jpg",
+   description:"Bundt cake with berries.",
+   details:"Rose berry bundt cake.",
+   techniques:["Bundt"],
+   alt:"Bundt cake with pink glaze, topped with fresh strawberries and blueberries"},
+  {name:"Choco-Vanilla Marble Loaf", category:"Tea-Time Bakes", photo:"Choco-Vanilla Marble Loaf.jpg",
+   description:"Marbled loaf cake.",
+   details:"Choco-vanilla marble loaf.",
+   techniques:["Loaf cake","Marbling"],
+   alt:"Sliced chocolate and vanilla marble loaf showing the swirl"},
+  {name:"Cake Rusk", category:"Tea-Time Bakes", photo:"Cake rusk.jpg",
+   description:"Twice-baked rusks.",
+   details:"Cake rusk.",
+   techniques:["Twice baked"],
+   alt:"Rows of golden cake rusks on a wooden board"},
+  {name:"Scones", category:"Tea-Time Bakes", photo:"Scones.jpg",
+   description:"Wedge scones.",
+   details:"Scones.",
+   techniques:["Scones"],
+   alt:"Golden wedge scones on a white plate"},
+  {name:"Almond Scones", category:"Tea-Time Bakes", photo:"Almond Scones.jpg",
+   description:"Round scones with almonds.",
+   details:"Almond scones.",
+   techniques:["Scones"],
+   alt:"Round almond scones in a carved wooden bowl"},
+  {name:"Banana Crumble Muffins", category:"Tea-Time Bakes", photo:"Banana Crumble Muffins.jpg",
+   description:"Muffins with a crumble top.",
+   details:"Banana crumble muffins.",
+   techniques:["Muffins","Crumble topping"],
+   alt:"Three banana crumble muffins topped with banana slices on a white dish"}
+];
+
+/* EDIT: technical skills (from the PDF) — icon is one of: whisk, layers, piping, cocoa, clipboard, teach */
+const SKILLS = [
+  {group:"Baking", icon:"whisk", items:["Sponges, layer cakes & tea-time cakes","Sourdough, enriched doughs & loaves","Buns, rolls & stuffed breads","Cookies, brownies & scones","Eggless recipe development"]},
+  {group:"Pastry & Desserts", icon:"layers", items:["Shortcrust tarts, pies & quiche","Puff pastry & vol-au-vents","Layered pastries, entremets & mousse","Baked & set cheesecakes","Dessert cups & ice creams"]},
+  {group:"Decorating & Finishing", icon:"piping", items:["Buttercream finishes & piping","Palette-knife work","Fondant covering & bows","Modelled figures","Rice paper & wafer paper","Drip, ganache & glaze finishes"]},
+  {group:"Chocolate", icon:"cocoa", items:["Centre-filled chocolates & bars","Chocolate garnishes & decorations","Fudge & confectionery"]},
+  {group:"Production & Operations", icon:"clipboard", items:["Product & recipe development","Quality control & consistency","Order scheduling & production planning","Ingredient sourcing & inventory","Kitchen hygiene & food safety"]},
+  {group:"Instruction", icon:"teach", items:["Practical baking instruction","Demonstrating techniques"]}
+];
+
+/* EDIT: areas of expertise (from the PDF) */
+const SPECIALITIES = [
+  ["Cakes","Custom celebration and wedding cakes, from single tier to three tiers."],
+  ["Buttercream Decoration","Smooth and textured finishes, piping, rosettes and drip work."],
+  ["Fondant Work","Covered cakes, ruffles, panels, toppers and themed detailing."],
+  ["Chocolate Work","Ganache, glazes, chocolate garnishes and centre-filled chocolates."],
+  ["Cookies","Classic, wholesome and traditional cookies, made for gifting and everyday orders."],
+  ["Breads & Sourdough","Enriched doughs, buns, rolls, loaves and sourdough."],
+  ["Pastries","Tarts, pies, puff pastry, layered pastries and scones."],
+  ["Desserts","Entremets, mousse cakes, cheesecakes, dessert cups and ice creams."],
+  ["Eggless Baking","Every product in my range is made 100% eggless."]
+];
+
+/* EDIT: filter button order (categories without dishes are hidden) */
+const CATEGORY_ORDER = ["Cakes","Chocolate & Confectionery","Breads","Pastries & Tarts","Entremets & Desserts","Cookies","Tea-Time Bakes"];
+
+const CONTACT_EMAIL = "chaudhary.divya524@gmail.com"; // EDIT: where the contact form sends
+
+/* ===================== No edits needed below this line ===================== */
+const img = f => "images/" + encodeURIComponent(f);
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---- Gallery & filters ---- */
+const grid = $("#grid"), filters = $("#filters");
+grid.innerHTML = DISHES.map((d,i) => `
+  <button class="card reveal" type="button" data-i="${i}" data-cat="${esc(d.category)}" aria-label="${esc(d.name)} — open larger view">
+    <div class="card-img"><img src="${img(d.photo)}" alt="${esc(d.alt)}" loading="lazy" decoding="async"></div>
+    <p class="card-cat">${esc(d.category)}</p>
+    <h3>${esc(d.name)}</h3>
+    <p>${esc(d.description)}</p>
+  </button>`).join("");
+
+const counts = DISHES.reduce((m,d) => (m[d.category]=(m[d.category]||0)+1, m), {});
+const cats = ["All", ...CATEGORY_ORDER.filter(c => counts[c]), ...Object.keys(counts).filter(c => !CATEGORY_ORDER.includes(c))];
+filters.innerHTML = cats.map(c => `<button class="filter" type="button" data-cat="${esc(c)}" aria-pressed="${c==="All"}">${esc(c)}<span class="count">${c==="All"?DISHES.length:counts[c]}</span></button>`).join("");
+
+let visible = DISHES.map((_,i) => i);
+filters.addEventListener("click", e => {
+  const b = e.target.closest(".filter"); if (!b) return;
+  const cat = b.dataset.cat;
+  filters.querySelectorAll(".filter").forEach(x => x.setAttribute("aria-pressed", x===b));
+  visible = [];
+  grid.querySelectorAll(".card").forEach(card => {
+    const show = cat==="All" || card.dataset.cat===cat;
+    card.classList.toggle("hide", !show);
+    if (show) { visible.push(+card.dataset.i); card.classList.add("in"); }
+  });
+});
+
+/* ---- Lightbox ---- */
+const lb = $("#lightbox"), lbImg = $("#lb-img");
+let pos = 0, lastFocus = null;
+function show(p){
+  pos = (p + visible.length) % visible.length;
+  const d = DISHES[visible[pos]];
+  lbImg.src = img(d.photo); lbImg.alt = d.alt;
+  $("#lb-cat").textContent = d.category;
+  $("#lb-title").textContent = d.name;
+  $("#lb-desc").textContent = d.details || d.description;
+  $("#lb-tags").innerHTML = (d.techniques||[]).map(t => `<span class="tag">${esc(t)}</span>`).join("");
+  $("#lb-count").textContent = `${pos+1} / ${visible.length}`;
+  // preload neighbours
+  [1,-1].forEach(k => { const n = DISHES[visible[(pos+k+visible.length)%visible.length]]; new Image().src = img(n.photo); });
+}
+function openLb(i){
+  lastFocus = document.activeElement;
+  show(visible.indexOf(i));
+  lb.classList.add("open"); lb.setAttribute("aria-hidden","false");
+  document.body.style.overflow = "hidden";
+  $("#lb-close").focus();
+}
+function closeLb(){
+  lb.classList.remove("open"); lb.setAttribute("aria-hidden","true");
+  document.body.style.overflow = "";
+  if (lastFocus) lastFocus.focus();
+}
+grid.addEventListener("click", e => { const c = e.target.closest(".card"); if (c) openLb(+c.dataset.i); });
+$("#lb-close").onclick = closeLb;
+$("#lb-prev").onclick = () => show(pos-1);
+$("#lb-next").onclick = () => show(pos+1);
+lb.addEventListener("click", e => { if (e.target === lb || e.target.classList.contains("lb-media")) closeLb(); });
+document.addEventListener("keydown", e => {
+  if (!lb.classList.contains("open")) return;
+  if (e.key === "Escape") closeLb();
+  else if (e.key === "ArrowLeft") show(pos-1);
+  else if (e.key === "ArrowRight") show(pos+1);
+  else if (e.key === "Tab") { // keep focus inside the lightbox
+    const f = [...lb.querySelectorAll("button")]; const first=f[0], last=f[f.length-1];
+    if (e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+  }
+});
+let tx = null, ty = null;
+lb.addEventListener("touchstart", e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+lb.addEventListener("touchend", e => {
+  if (tx === null) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) show(pos + (dx < 0 ? 1 : -1));
+  tx = null;
+});
+
+/* ---- Skills & specialities ---- */
+const ICONS = {
+  whisk:'<path d="M12 14v7M8 3c0 5 1.5 9 4 11 2.5-2 4-6 4-11M10 3c0 4 .7 7.5 2 9.5 1.3-2 2-5.5 2-9.5"/>',
+  layers:'<path d="M3 10h18M4 10l1.5 9h13L20 10M6 10c0-3 2.7-5 6-5s6 2 6 5"/>',
+  piping:'<path d="M5 4l10 10M15 14l3 3-1.5 1.5L13 15M5 4c-1 2 1 6 4 8l3-3C10 6 7 3 5 4z"/>',
+  cocoa:'<rect x="4" y="5" width="16" height="14" rx="1.5"/><path d="M4 12h16M12 5v14M8 5v14M16 5v14"/>',
+  clipboard:'<rect x="5" y="4" width="14" height="17" rx="1.5"/><path d="M9 4V3h6v1M8.5 10h7M8.5 14h7M8.5 18h4"/>',
+  teach:'<path d="M3 9l9-5 9 5-9 5-9-5z"/><path d="M7 11.5V16c1.5 1.5 3 2 5 2s3.5-.5 5-2v-4.5"/>'
+};
+$("#skills-grid").innerHTML = SKILLS.map(s => `
+  <div class="skill-group reveal">
+    <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[s.icon]||""}</svg>${esc(s.group)}</h3>
+    <ul class="skill-tags" style="list-style:none;padding:0;margin:0">${s.items.map(i => `<li class="tag">${esc(i)}</li>`).join("")}</ul>
+  </div>`).join("");
+const roman = ["i","ii","iii","iv","v","vi","vii","viii","ix","x","xi","xii"];
+$("#spec-grid").innerHTML = SPECIALITIES.map(([t,d],i) => `
+  <div class="spec reveal"><span class="num">${roman[i]||i+1}.</span><h4>${esc(t)}</h4><p>${esc(d)}</p></div>`).join("");
+
+/* ---- Navigation: mobile menu, scrolled state, active section ---- */
+const burger = $("#burger"), links = $("#nav-links");
+burger.onclick = () => {
+  const open = burger.getAttribute("aria-expanded") !== "true";
+  burger.setAttribute("aria-expanded", open); burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  links.classList.toggle("open", open);
+};
+links.addEventListener("click", e => { if (e.target.tagName === "A") { links.classList.remove("open"); burger.setAttribute("aria-expanded","false"); burger.setAttribute("aria-label","Open menu"); } });
+const nav = $("#nav");
+addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 10), {passive:true});
+const navLinks = [...links.querySelectorAll("a")];
+const sections = navLinks.map(a => document.querySelector(a.getAttribute("href")));
+const spy = new IntersectionObserver(entries => {
+  entries.forEach(en => { if (en.isIntersecting) {
+    navLinks.forEach(a => { const on = a.getAttribute("href") === "#"+en.target.id; a.classList.toggle("active", on); on ? a.setAttribute("aria-current","true") : a.removeAttribute("aria-current"); });
+  }});
+}, {rootMargin:"-45% 0px -50% 0px"});
+sections.forEach(s => s && spy.observe(s));
+new IntersectionObserver(([en]) => { if (en.isIntersecting) navLinks.forEach(a => { a.classList.remove("active"); a.removeAttribute("aria-current"); }); },
+  {rootMargin:"-45% 0px -50% 0px"}).observe($("#home"));
+
+/* ---- Fade-in on scroll ---- */
+const io = new IntersectionObserver(entries => entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }), {threshold:.12, rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+/* ---- Contact form (opens the visitor's email app) ---- */
+$("#contact-form").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target, status = $("#form-status");
+  if (!f.checkValidity()) { status.textContent = "Please fill in your name, a valid email and a message."; f.querySelector(":invalid").focus(); return; }
+  const subject = `Portfolio enquiry from ${f.name.value}`;
+  const body = `${f.message.value}\n\n— ${f.name.value} (${f.email.value})`;
+  location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  status.textContent = "Opening your email app… If nothing happens, email " + CONTACT_EMAIL + " directly.";
+});
+$("#year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
